@@ -17,7 +17,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 // import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
-/* import HomeHeader组件 */
+/* import HomeHeader 组件 */
 import HomeHeader from '@/components/homeHeader.vue';
 import CommonFooter from '@/components/commonFooter.vue';
 import List from '@/components/list';

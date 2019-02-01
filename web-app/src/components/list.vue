@@ -13,8 +13,10 @@
 </template>
 
 <script>
+
   export default {
     props: ['price', 'title', 'img']   /*  props是子组件获取父组件数据用的 */
+
   }
 </script>
 
