@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home testd</router-link> |
+      <router-link to="/">Home test</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -20,6 +20,6 @@
   a
     font-weight bold
     color #2c3e50
-    &.router-link-exact-active
+    &.router-link-exact-activewebpack.dev.conf.js
       color #42b983
 </style>
