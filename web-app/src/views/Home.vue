@@ -20,7 +20,7 @@ import { Component, Vue } from 'vue-property-decorator';
 /* import HomeHeader 组件 */
 import HomeHeader from '@/components/homeHeader.vue';
 import CommonFooter from '@/components/commonFooter.vue';
-import List from '@/components/list';
+import List from '@/components/list.vue';
 
 @Component({
   components: {
@@ -31,6 +31,7 @@ import List from '@/components/list';
   },
 })
 export default class Home extends Vue {
+  private items: any;
 
   data () {
     return {
@@ -43,9 +44,9 @@ export default class Home extends Vue {
     //console.log(this.$http);
     /* 调用vue的ajax来请求数据，promise语法，并用es6的箭头函数 */
     this.$http.get('/goods/list').then((data) => {
-      var itemData = JSON.parse(data.bodyText);//将json字符串转换成json对象
-      console.log(itemData.data);
-      this.items = itemData.data.goods;
+      const item = data.data;
+      //const itemData = JSON.stringify(item);//将json字符串转换成json对象
+      this.items = item.data.goods;
     })
   }
 }

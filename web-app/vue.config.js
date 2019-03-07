@@ -1,14 +1,16 @@
 //模拟数据
 const express = require('express');
 
-//const app = express();
+const app = express();
 const mockData = require('./public/mock/data.json');
 const mockDataGoods = require('./public/mock/goods.json');
-// var apiRoutes = express.Router();
-// app.use('/api',apiRoutes);
+var apiRoutes = express.Router();
+app.use('/api',apiRoutes);
 
 module.exports = {
        // webpack-dev-server 相关配置
+    baseUrl: './',
+    outputDir: 'dist',
     devServer: {
       port:8081,
       before(app){
